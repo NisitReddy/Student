@@ -1,0 +1,58 @@
+3.package Sample;
+
+public class Stringpract3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StringBuffer ri1 = new StringBuffer("Amila");
+		String ri2 = new String("Mihela");
+		StringBuilder ri3 = new StringBuilder("Crimea");
+		StringBuilder ri4 = new StringBuilder("Crimea");
+		System.out.println(ri1.equals(ri2));
+		System.out.println(ri3==ri4);
+		System.out.println(ri1.hashCode());
+		System.out.println(ri3.toString());
+		System.out.println(ri2.getClass());
+	}
+
+}
+2.package Sample;
+
+public class Stringpract2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StringBuffer bu1 = new StringBuffer("Hanumanth");
+		StringBuffer bu2 = new StringBuffer("manjunath");
+		StringBuilder bu3 = new StringBuilder(bu2);
+		StringBuilder bu4 = bu3;
+		System.out.println(bu2.reverse());
+		System.out.println(bu1.delete(0,4));
+		System.out.println(bu3.append(" mohan"));
+		System.out.println(bu4.insert(7, "dah"));
+		System.out.println(bu2.length());
+	}
+
+}
+1.package Sample;
+
+public class Stringpract {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String d1 = "mahesh";
+		String d2 = new String("himesh");
+		String d3 = new String(d2);
+		String d4 = d1;
+		System.out.println(d1.concat("raju"));
+		System.out.println(d2.charAt(3));
+		System.out.println(d2.substring(0,4));
+		System.out.println(d1.replace("mah", "raj"));
+		System.out.println(d2.indexOf('e'));
+		System.out.println(d2.startsWith("him"));
+		System.out.println(d2.endsWith("mes"));
+		System.out.println(d1.equals("mahesh"));
+	}
+
+}
+
