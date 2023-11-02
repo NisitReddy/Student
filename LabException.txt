@@ -1,0 +1,78 @@
+package practice;
+
+class InvalidNameException extends Exception{
+	InvalidNameException(String s){
+		super(s);
+	}
+}
+class InvalidCountryException extends Exception{
+	InvalidCountryException(String s){
+		super(s);
+	}
+}
+class InvalidTaxException extends Exception{
+	InvalidTaxException(String s){
+		super(s);
+	}
+}
+public class Taxcalculator {
+	static void validateTax(String empname,String empcountry,double salary) throws InvalidNameException,InvalidCountryException,InvalidTaxException{
+		
+		if(empname == null) 
+			{ throw new InvalidNameException("InvalidNameException");}
+		if(empcountry!="india")
+		{ throw new InvalidCountryException("InvalidCountryException");}
+		
+			
+	double tax;
+	if(salary >= 100000) {
+		tax = salary*(8/100);
+		
+	}
+		else if(salary >= 50000 && salary < 100000) {
+		tax = salary*(7/100);
+
+	}
+		else if(salary < 50000 && salary >= 20000) {
+		tax = salary*(6/100);
+	
+		}
+		else if(salary < 20000) {
+			tax = 0;
+			
+		}
+		else 
+			System.out.println("No tax"); throw new InvalidTaxException("InvalidTaxException");
+			}
+	
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			validateTax(null,"india",30000);
+			
+		}catch(Exception e1) {
+			System.out.println(e1);
+			
+		}
+		try {
+			validateTax("varun","usa",50000);
+		}catch(Exception e2) {
+			System.out.println(e2);
+			
+		}
+		try {		
+			validateTax("sri","india",10000);
+		}catch(Exception e3) {
+			System.out.println(e3);
+			}
+		try {
+			validateTax("shiva","india",100000);
+		}catch(Exception e) {
+			System.out.println(e);
+		}
+	}
+
+}
